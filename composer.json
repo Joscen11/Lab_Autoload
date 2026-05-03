@@ -1,0 +1,17 @@
+{
+    "name": "joselyn/lab_autoload",
+    "description": "Proyecto de autoload con PSR-4 en PHP",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joscen11",
+            "email": "nightmorning1572@gmail.com"
+        }
+    ],
+    "require": {}
+}
