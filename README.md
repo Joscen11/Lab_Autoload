@@ -300,7 +300,7 @@ class RegistroService
 
 ### 2. Ejecutar `php index.php`
 
-![ejecucion](images/ejecucion.png)
+![ejecucion](images/Ejecución.png)
 
 
 > Sin errores de `Class not found` — el autoloader resuelve cada clase automáticamente en tiempo de ejecución.
