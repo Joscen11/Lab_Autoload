@@ -1,0 +1,11 @@
+{
+    "name": "joselyn/lab_autoload",
+    "description": "Proyecto de autoload con PSR-4 en PHP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Joselyn\\LabAutoload\\": "src/"
+        }
+    },
+    "require": {}
+}
