@@ -1,16 +1,10 @@
 <?php
 
-namespace App\Services;
+namespace Joselyn\LabAutoload\Services;  
 
-use App\Models\Usuario;
-use App\Models\Producto;
+use Joselyn\LabAutoload\Models\Usuario;  
+use Joselyn\LabAutoload\Models\Producto; 
 
-/**
- * Clase RegistroService
- * 
- * Gestiona el registro de usuarios y productos.
- * Namespace App\Services → carpeta src/Services/
- */
 class RegistroService
 {
     /**

@@ -1,13 +1,7 @@
 <?php
 
-namespace App\Models;
+namespace Joselyn\LabAutoload\Models;  
 
-/**
- * Clase Producto
- * 
- * Representa un producto dentro del sistema.
- * Namespace App\Models → carpeta src/Models/
- */
 class Producto
 {
     private string $nombre;

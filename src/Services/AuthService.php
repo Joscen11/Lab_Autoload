@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace Joselyn\LabAutoload\Services; 
 
-use App\Models\Usuario;
+use Joselyn\LabAutoload\Models\Usuario; 
 
 class AuthService
 {

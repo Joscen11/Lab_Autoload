@@ -133,22 +133,12 @@ App\Services\RegistroService→  src/Services/RegistroService.php
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use App\Models\Usuario;
-use App\Models\Producto;
-use App\Services\AuthService;
-use App\Services\RegistroService;
+use Joselyn\LabAutoload\Saludo;
 
-// Crear objetos
-$usuario  = new Usuario('Joselyn Cención', 'joselyn28c@gmail.com');
-$producto = new Producto('Laptop Dell', 850.00);
-
-// Usar servicios
-$auth     = new AuthService();
-$registro = new RegistroService();
-
-$auth->login($usuario);
-$registro->registrarUsuario($usuario);
-$registro->registrarProducto($producto);
+Saludo::decirHola("joselyn28c@gmail.com");
+Saludo::autenticar("Joselyn Cención", "joselyn28c@gmail.com");
+Saludo::registrarUsuario("Joselyn Cención", "joselyn28c@gmail.com");
+Saludo::registrarProducto("Laptop Dell", "850.00");
 ```
 
 ---
@@ -158,7 +148,7 @@ $registro->registrarProducto($producto);
 ```php
 <?php
 
-namespace App\Models;
+namespace Joselyn\LabAutoload\Models;
 
 class Usuario
 {
@@ -172,7 +162,11 @@ class Usuario
     }
 
     public function getNombre(): string { return $this->nombre; }
-    public function getEmail(): string  { return $this->email;  }
+    public function getEmail(): string  { return $this->email; }
+
+    public function setNombre(string $nombre): void { $this->nombre = $nombre; }
+    public function setEmail(string $email): void   { $this->email = $email; }
+
 }
 ```
 
@@ -183,7 +177,7 @@ class Usuario
 ```php
 <?php
 
-namespace App\Models;
+namespace Joselyn\LabAutoload\Models;  
 
 class Producto
 {
@@ -220,9 +214,9 @@ class Producto
 ```php
 <?php
 
-namespace App\Services;
+namespace Joselyn\LabAutoload\Services; 
 
-use App\Models\Usuario;
+use Joselyn\LabAutoload\Models\Usuario; 
 
 class AuthService
 {
@@ -263,6 +257,7 @@ class AuthService
         return $this->usuarioActual;
     }
 }
+```
 
 ---
 
@@ -271,18 +266,24 @@ class AuthService
 ```php
 <?php
 
-namespace App\Services;
+namespace Joselyn\LabAutoload\Services;  
 
-use App\Models\Usuario;
-use App\Models\Producto;
+use Joselyn\LabAutoload\Models\Usuario;  
+use Joselyn\LabAutoload\Models\Producto; 
 
 class RegistroService
 {
+    /**
+     * Registra un nuevo usuario en el sistema.
+     */
     public function registrarUsuario(Usuario $usuario): void
     {
         echo "📋 Usuario registrado: " . $usuario->getNombre() . PHP_EOL;
     }
 
+    /**
+     * Registra un nuevo producto en el sistema.
+     */
     public function registrarProducto(Producto $producto): void
     {
         echo "📦 Producto registrado: " . $producto . PHP_EOL;

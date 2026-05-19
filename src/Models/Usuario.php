@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace Joselyn\LabAutoload\Models;
 
 class Usuario
 {
